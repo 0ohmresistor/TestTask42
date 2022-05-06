@@ -139,7 +139,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="List.cpp" />
     <ClCompile Include="S-Terra test task.cpp" />
   </ItemGroup>
   <ItemGroup>

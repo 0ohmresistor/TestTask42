@@ -11,18 +11,18 @@ mutex mtx;
 int zeroesCounter = 0;
 int onesCounter = 0;
 
-list <unsigned int> listToCheck;
-list <unsigned int> bufferList;
+list <unsigned char> listToCheck;
+list <unsigned char> bufferList;
 
 /// <summary>
 ///     Prints list values to the console
 /// </summary>
 /// <param name="listToPrint"> List of integers to print </param>
-void PrintList(list<unsigned int> listToPrint)
+void PrintList(list<unsigned char> listToPrint)
 {
     for (auto it = listToPrint.begin(); it != listToPrint.end(); it++)
     {
-        cout << (*it) << " ";
+        cout << (int)(*it) << " ";
     }
 
     cout << endl;
@@ -51,7 +51,7 @@ void ListChecker(bool invertedList, int &itemsPassedCounter)
             auto currentItem = bufferList.front();
             
             //  This also counts zeros in insignificant digits
-            zeroesCounter += 8 * sizeof(unsigned int) - __popcnt(bufferList.front());
+            zeroesCounter += 8 * sizeof(unsigned char) - __popcnt(bufferList.front());
 
             bufferList.pop_front();
             
